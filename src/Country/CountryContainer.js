@@ -4,17 +4,17 @@ import CountryList from './CountryList';
 class CountryContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data: []
+    };
   }
 
   fetchData() {
     fetch('http://api.citybik.es/v2/networks/')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-      });
+      .then(response => response.json())
+      //   .then(json => console.log(json))
+      .then(json => this.setState({ data: json }));
+    //   .then(countries => this.setState({ countries }));
   }
 
   componentDidMount() {
@@ -22,7 +22,11 @@ class CountryContainer extends React.Component {
   }
 
   render() {
-    return <CountryList />;
+    return (
+      <ul>
+        <CountryList data={this.state.data} />
+      </ul>
+    );
   }
 }
 

@@ -1,9 +1,14 @@
 import React from 'react';
+import Country from './Country';
 
-const CountryList = props => (
-  <div>
-    <h3>country list</h3>
-  </div>
-);
+const CountryList = props => {
+  if (props.data.networks) {
+    return props.data.networks.map(network => {
+      return <Country data={network.location.country} />;
+    });
+  } else {
+    return null;
+  }
+};
 
 export default CountryList;
