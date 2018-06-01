@@ -1,4 +1,5 @@
 import React from 'react';
+import CountryList from './CountryList';
 
 class CountryContainer extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class CountryContainer extends React.Component {
   }
 
   render() {
-    return <div> Countries yo</div>;
+    return <CountryList />;
   }
 }
 
