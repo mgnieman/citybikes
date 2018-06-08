@@ -6,7 +6,7 @@ import CityContainer from './City/CityContainer';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <div className="header">
           <h2>CityBikes</h2>
         </div>
