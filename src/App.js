@@ -6,7 +6,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>CityBikes</h2>
+        <div className="header">
+          <h2>CityBikes</h2>
+        </div>
         <CountryContainer />
       </div>
     );

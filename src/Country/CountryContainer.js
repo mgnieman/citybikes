@@ -12,9 +12,9 @@ class CountryContainer extends React.Component {
   fetchData() {
     fetch('http://api.citybik.es/v2/networks/')
       .then(response => response.json())
-      //   .then(json => console.log(json))
-      .then(json => this.setState({ data: json }));
-    //   .then(countries => this.setState({ countries }));
+      .then(json => {
+        this.setState({ data: json.networks });
+      });
   }
 
   componentDidMount() {
@@ -23,9 +23,11 @@ class CountryContainer extends React.Component {
 
   render() {
     return (
-      <ul>
-        <CountryList data={this.state.data} />
-      </ul>
+      <div className="country-container">
+        {this.state.data.length > 0 ? (
+          <CountryList data={this.state.data} />
+        ) : null}
+      </div>
     );
   }
 }
