@@ -12,7 +12,7 @@ const CountryList = props => {
   });
 
   return uniqueCountries.sort().map(country => {
-    return <Country data={country} key={country} />;
+    return <Country country={country} key={country} />;
   });
 };
 
