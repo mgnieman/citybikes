@@ -1,7 +1,7 @@
 import React from 'react';
-import CityContainer from './City/CityContainer';
+import CityContainer from '../City/CityContainer';
 
-class Button extends React.Component {
+class CountryButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,4 +27,4 @@ class Button extends React.Component {
   }
 }
 
-export default Button;
+export default CountryButton;

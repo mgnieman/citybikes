@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '../Button';
+import CountryButton from '../Country/CountryButton';
 
 const City = props => (
   <div>
-    <Button label={props.data.location.city} />
+    <CountryButton label={props.data.location.city} />
   </div>
 );
 
