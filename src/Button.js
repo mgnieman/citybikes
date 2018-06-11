@@ -1,15 +1,18 @@
 import React from 'react';
 import CityContainer from './City/CityContainer';
-// import CityContainer from './City/CityContainer';
 
 class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      viewCities: false
+    };
+  }
+
   clickCountry = e => {
     e.preventDefault();
-    console.log('you clicked', e.target.value);
-    // <CityContainer country={e.target.value} />;
-    // this.setState({
-    //   country: e.target.value
-    // });
+    this.viewCityContainer = <CityContainer country={e.target.value} />;
+    this.setState({ viewCities: true });
   };
 
   render() {
@@ -18,9 +21,7 @@ class Button extends React.Component {
         <button value={this.props.label} onClick={this.clickCountry}>
           {this.props.label}
         </button>
-        {/* <div>
-          <CityContainer country={this.state.country} />
-        </div> */}
+        <div>{this.state.viewCities ? this.viewCityContainer : true}</div>
       </div>
     );
   }
