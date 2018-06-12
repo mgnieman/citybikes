@@ -6,7 +6,7 @@ const CityList = props => {
     if (item.location.country === props.country) {
       return (
         <div>
-          <City data={item} />
+          <City data={item} key={item.location.city} />
         </div>
       );
     }

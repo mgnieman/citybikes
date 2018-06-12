@@ -1,5 +1,5 @@
 import React from 'react';
-import CityContainer from './CityContainer';
+import ShopContainer from '../Shop/ShopContainer';
 
 class CityButton extends React.Component {
   constructor(props) {
@@ -9,17 +9,20 @@ class CityButton extends React.Component {
     };
   }
 
-  clickCountry = e => {
+  clickCity = e => {
     e.preventDefault();
-    console.log('you clicked');
+    console.log('you clicked', e.target.value);
+    this.viewShopContainer = <ShopContainer city={e.target.value} />;
+    this.setState({ viewShops: true });
   };
 
   render() {
     return (
       <div className="city-button">
-        <button value="City Button" onClick={this.clickCity}>
-          "City Button"
+        <button value={this.props.label} onClick={this.clickCity}>
+          {this.props.label}
         </button>
+        <div>{this.state.viewShops ? this.viewShopContainer : true}</div>
       </div>
     );
   }

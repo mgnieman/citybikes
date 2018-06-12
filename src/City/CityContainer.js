@@ -24,11 +24,7 @@ class CityContainer extends React.Component {
   render() {
     return (
       <div className="city-container">
-        <CityList
-          data={this.state.data}
-          country={this.props.country}
-          key={this.props.country}
-        />
+        <CityList data={this.state.data} country={this.props.country} />
       </div>
     );
   }
