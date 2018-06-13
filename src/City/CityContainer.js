@@ -4,9 +4,7 @@ import CityList from './CityList';
 class CityContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: []
-    };
+    this.state = { data: [] };
   }
 
   fetchData() {

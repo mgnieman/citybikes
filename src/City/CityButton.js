@@ -11,7 +11,6 @@ class CityButton extends React.Component {
 
   clickCity = e => {
     e.preventDefault();
-    console.log('you clicked', e.target.value);
     this.viewShopContainer = <ShopContainer city={e.target.value} />;
     this.setState({ viewShops: true });
   };

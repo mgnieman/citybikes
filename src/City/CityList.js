@@ -1,8 +1,8 @@
 import React from 'react';
 import City from './City';
 
-const CityList = props => {
-  return props.data.map(item => {
+const CityList = props =>
+  props.data.map(item => {
     if (item.location.country === props.country) {
       return (
         <div>
@@ -11,5 +11,5 @@ const CityList = props => {
       );
     }
   });
-};
+
 export default CityList;

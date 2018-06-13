@@ -2,7 +2,7 @@ import React from 'react';
 
 const Shop = props => (
   <div>
-    <h4>shops</h4>
+    <h4>{props.data}</h4>
   </div>
 );
 
