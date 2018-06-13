@@ -1,5 +1,6 @@
 import React from 'react';
 import CityList from './CityList';
+import Util from '../Util';
 
 class CityContainer extends React.Component {
   constructor(props) {
@@ -16,7 +17,11 @@ class CityContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchData();
+    Util.fetchData().then(data =>
+      this.setState({
+        data: data.networks
+      })
+    );
   }
 
   render() {

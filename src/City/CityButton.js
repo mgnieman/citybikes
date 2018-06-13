@@ -5,14 +5,15 @@ class CityButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewShops: false
+      // viewShops: false
+      shop: null
     };
   }
 
   clickCity = e => {
     e.preventDefault();
-    this.viewShopContainer = <ShopContainer city={e.target.value} />;
-    this.setState({ viewShops: true });
+    // this.viewShopContainer = <ShopContainer city={e.target.value} />;
+    this.setState({ shop: e.target.value });
   };
 
   render() {
@@ -21,7 +22,7 @@ class CityButton extends React.Component {
         <button value={this.props.label} onClick={this.clickCity}>
           {this.props.label}
         </button>
-        <div>{this.state.viewShops ? this.viewShopContainer : true}</div>
+        <div>{this.state.shop && <ShopContainer city={this.state.shop} />}</div>
       </div>
     );
   }

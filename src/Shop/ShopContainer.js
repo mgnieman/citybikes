@@ -20,11 +20,7 @@ class ShopContainer extends React.Component {
   }
 
   render() {
-    return (
-      <div className="shop-container">
-        <ShopList data={this.state.data} city={this.props.city} />
-      </div>
-    );
+    return <ShopList data={this.state.data} city={this.props.city} />;
   }
 }
 

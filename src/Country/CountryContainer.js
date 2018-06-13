@@ -1,5 +1,6 @@
 import React from 'react';
 import CountryList from './CountryList';
+import Util from '../Util';
 
 class CountryContainer extends React.Component {
   constructor(props) {
@@ -9,16 +10,12 @@ class CountryContainer extends React.Component {
     };
   }
 
-  fetchData() {
-    fetch('http://api.citybik.es/v2/networks/')
-      .then(response => response.json())
-      .then(json => {
-        this.setState({ data: json.networks });
-      });
-  }
-
   componentDidMount() {
-    this.fetchData();
+    Util.fetchData().then(data => {
+      this.setState({
+        data: data.networks
+      });
+    });
   }
 
   render() {
