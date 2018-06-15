@@ -1,10 +1,6 @@
 import React from 'react';
 import CityButton from './CityButton';
 
-const City = props => (
-  <div>
-    <CityButton label={props.data.location.city} />
-  </div>
-);
+const City = props => <CityButton label={props.data.location.city} />;
 
 export default City;

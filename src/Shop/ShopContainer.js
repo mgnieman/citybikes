@@ -1,4 +1,5 @@
 import React from 'react';
+import Util from '../Util';
 import ShopList from './ShopList';
 
 class ShopContainer extends React.Component {
@@ -7,16 +8,12 @@ class ShopContainer extends React.Component {
     this.state = { data: [] };
   }
 
-  fetchData() {
-    fetch('http://api.citybik.es/v2/networks/')
-      .then(response => response.json())
-      .then(json => {
-        this.setState({ data: json.networks });
-      });
-  }
-
   componentDidMount() {
-    this.fetchData();
+    Util.fetchData().then(data => {
+      this.setState({
+        data: data.networks
+      });
+    });
   }
 
   render() {

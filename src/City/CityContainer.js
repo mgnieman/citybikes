@@ -8,14 +8,6 @@ class CityContainer extends React.Component {
     this.state = { data: [] };
   }
 
-  fetchData() {
-    fetch('http://api.citybik.es/v2/networks/')
-      .then(response => response.json())
-      .then(json => {
-        this.setState({ data: json.networks });
-      });
-  }
-
   componentDidMount() {
     Util.fetchData().then(data =>
       this.setState({
@@ -25,11 +17,7 @@ class CityContainer extends React.Component {
   }
 
   render() {
-    return (
-      <div className="city-container">
-        <CityList data={this.state.data} country={this.props.country} />
-      </div>
-    );
+    return <CityList data={this.state.data} country={this.props.country} />;
   }
 }
 
