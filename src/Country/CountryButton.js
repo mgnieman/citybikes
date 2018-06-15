@@ -5,14 +5,13 @@ class CountryButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewCities: false
+      country: null
     };
   }
 
   clickCountry = e => {
     e.preventDefault();
-    this.viewCityContainer = <CityContainer country={e.target.value} />;
-    this.setState({ viewCities: true });
+    this.setState({ country: e.target.value });
   };
 
   render() {
@@ -21,7 +20,9 @@ class CountryButton extends React.Component {
         <button value={this.props.label} onClick={this.clickCountry}>
           {this.props.label}
         </button>
-        <div>{this.state.viewCities ? this.viewCityContainer : true}</div>
+        <div>
+          {this.state.country && <CityContainer country={this.state.country} />}
+        </div>
       </div>
     );
   }
