@@ -1,5 +1,6 @@
 import React from 'react';
 import Country from './Country';
+import { Link } from 'react-router-dom';
 
 const CountryList = props => {
   let uniqueCountries = [];
@@ -12,7 +13,11 @@ const CountryList = props => {
   });
 
   return uniqueCountries.sort().map(country => {
-    return <Country country={country} key={country} />;
+    return (
+      <Link to={`/cities/${country}`} key={country}>
+        <Country country={country} />
+      </Link>
+    );
   });
 };
 

@@ -1,12 +1,14 @@
 import React from 'react';
 import Util from '../Util';
-import CountryButton from '../Country/CountryButton';
 import CityList from './CityList';
 
 class CityContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = {
+      data: [],
+      country: null
+    };
   }
 
   componentDidMount() {
@@ -18,9 +20,12 @@ class CityContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    // return <CityList data={this.state.data} country={this.props.country} />;
-    return <h4>City Container here</h4>;
+    return (
+      <div>
+        <h4>City Container here</h4>
+        <CityList data={this.state.data} country={this.props.country} />
+      </div>
+    );
   }
 }
 
