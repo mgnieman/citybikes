@@ -12,14 +12,10 @@ const App = () => (
         <div>
           <Link to="/">Home</Link>
         </div>
-        <br />
-        <div>
-          <Link to="/city">City</Link>
-        </div>
       </div>
 
       <Route exact path="/" component={CountryContainer} />
-      <Route path="/" component={CityContainer} />
+      <Route path="/cities" component={CityContainer} />
     </div>
   </Router>
 );

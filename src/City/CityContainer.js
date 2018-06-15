@@ -18,7 +18,9 @@ class CityContainer extends React.Component {
   }
 
   render() {
-    return <CityList data={this.state.data} country={this.props.country} />;
+    console.log(this.props);
+    // return <CityList data={this.state.data} country={this.props.country} />;
+    return <h4>City Container here</h4>;
   }
 }
 

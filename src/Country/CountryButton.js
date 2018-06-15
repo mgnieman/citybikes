@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CityContainer from '../City/CityContainer';
+import CityCont from './CityCont';
 
 class CountryButton extends React.Component {
   constructor(props) {
@@ -9,19 +11,20 @@ class CountryButton extends React.Component {
     };
   }
 
-  clickCountry = e => {
-    e.preventDefault();
-    this.setState({ country: e.target.value });
-  };
+  // clickCountry = e => {
+  //   e.preventDefault();
+  //   this.setState({ country: e.target.value });
+  // };
 
   render() {
     return (
-      <div className="country-button">
-        <button value={this.props.label} onClick={this.clickCountry}>
-          {this.props.label}
-        </button>
-        <div>
-          {this.state.country && <CityContainer country={this.state.country} />}
+      <div>
+        <div className="country-button">
+          <Link to="/cities">
+            <button value={this.props.label} /* onClick={this.clickCountry} */>
+              {this.props.label}
+            </button>
+          </Link>
         </div>
       </div>
     );
