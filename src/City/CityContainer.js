@@ -14,16 +14,18 @@ class CityContainer extends React.Component {
   componentDidMount() {
     Util.fetchData().then(data =>
       this.setState({
-        data: data.networks
+        data: data.networks,
+        country: this.props.match.params.country
       })
     );
   }
 
   render() {
+    console.log(this.state.data);
     return (
       <div>
-        <h4>City Container here</h4>
-        <CityList data={this.state.data} country={this.props.country} />
+        <h4>Select a city in {this.state.country}</h4>
+        <CityList data={this.state.data} country={this.state.country} />
       </div>
     );
   }
