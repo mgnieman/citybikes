@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
+import ShopContainer from './Shop/ShopContainer';
 
 const App = () => (
   <Router>
@@ -16,6 +17,7 @@ const App = () => (
 
       <Route path="/" exact component={CountryContainer} />
       <Route path="/cities/:country" component={CityContainer} />
+      <Route path="/cities/:country/:shops" component={ShopContainer} />
     </div>
   </Router>
 );

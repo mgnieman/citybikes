@@ -1,10 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import City from './City';
 
 const CityList = props =>
-  props.data.map(item => {
-    if (item.location.country === props.country) {
-      return <City data={item} key={item.id} />;
+  props.data.map(network => {
+    if (network.location.country === props.country) {
+      return (
+        <Link
+          to={`/cities/${network.location.country}/${network.location.city}`}
+        >
+          <City data={network} />
+        </Link>
+      );
     }
   });
 

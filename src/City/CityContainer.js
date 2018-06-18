@@ -21,7 +21,6 @@ class CityContainer extends React.Component {
   }
 
   render() {
-    console.log(this.state.data);
     return (
       <div>
         <h4>Select a city in {this.state.country}</h4>

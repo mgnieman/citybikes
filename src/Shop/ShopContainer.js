@@ -5,19 +5,29 @@ import ShopList from './ShopList';
 class ShopContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
+    this.state = {
+      data: [],
+      city: null
+    };
   }
 
   componentDidMount() {
     Util.fetchData().then(data => {
       this.setState({
-        data: data.networks
+        data: data.networks,
+        city: this.props.match.params.shops
       });
     });
   }
 
   render() {
-    return <ShopList data={this.state.data} city={this.props.city} />;
+    console.log('ShopContainer state:', this.state);
+    return (
+      <div>
+        <h4>Shops in {this.state.city}:</h4>
+        <ShopList data={this.state.data} city={this.state.city} />
+      </div>
+    );
   }
 }
 

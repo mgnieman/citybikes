@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Shop = props => <h4>{props.data}</h4>;
+const Shop = props => <li>{props.data}</li>;
 
 export default Shop;
