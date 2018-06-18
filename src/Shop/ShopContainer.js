@@ -6,26 +6,24 @@ class ShopContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
-      city: null
+      data: []
     };
   }
 
   componentDidMount() {
     Util.fetchData().then(data => {
       this.setState({
-        data: data.networks,
-        city: this.props.match.params.city
+        data: data.networks
       });
     });
   }
 
   render() {
-    console.log('ShopContainer props:', this.props.match);
+    let city = this.props.match.params.city;
     return (
       <div>
-        <h4>Shops in {this.state.city}:</h4>
-        <ShopList data={this.state.data} city={this.state.city} />
+        <h4>Shops in {city}:</h4>
+        <ShopList data={this.state.data} city={city} />
       </div>
     );
   }
