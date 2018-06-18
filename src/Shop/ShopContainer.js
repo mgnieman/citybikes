@@ -15,13 +15,13 @@ class ShopContainer extends React.Component {
     Util.fetchData().then(data => {
       this.setState({
         data: data.networks,
-        city: this.props.match.params.shops
+        city: this.props.match.params.city
       });
     });
   }
 
   render() {
-    console.log('ShopContainer state:', this.state);
+    console.log('ShopContainer props:', this.props.match);
     return (
       <div>
         <h4>Shops in {this.state.city}:</h4>
