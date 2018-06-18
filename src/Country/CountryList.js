@@ -14,9 +14,11 @@ const CountryList = props => {
 
   return uniqueCountries.sort().map(country => {
     return (
-      <Link to={`/countries/${country}`} key={country}>
+      // <div className="country-link">
+      <Link to={`/countries/${country}`} className="country-link" key={country}>
         <Country country={country} />
       </Link>
+      // </div>
     );
   });
 };

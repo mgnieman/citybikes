@@ -24,7 +24,9 @@ class CityContainer extends React.Component {
     return (
       <div>
         <h4>Select a city in {this.state.country}</h4>
-        <CityList data={this.state.data} country={this.state.country} />
+        <div className="city-container">
+          <CityList data={this.state.data} country={this.state.country} />
+        </div>
       </div>
     );
   }
