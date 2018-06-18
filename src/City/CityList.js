@@ -7,7 +7,10 @@ const CityList = props =>
     if (network.location.country === props.country) {
       return (
         <Link
-          to={`/cities/${network.location.country}/${network.location.city}`}
+          to={`/countries/${network.location.country}/cities/${
+            network.location.city
+          }`}
+          key={network.id}
         >
           <City data={network} />
         </Link>

@@ -16,8 +16,11 @@ const App = () => (
       </div>
 
       <Route path="/" exact component={CountryContainer} />
-      <Route path="/cities/:country" component={CityContainer} />
-      <Route path="/cities/:country/:shops" component={ShopContainer} />
+      <Route path="/countries/:country" component={CityContainer} />
+      <Route
+        path="/countries/:country/cities/:city"
+        component={ShopContainer}
+      />
     </div>
   </Router>
 );
