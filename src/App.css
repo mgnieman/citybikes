@@ -1,3 +1,7 @@
+body {
+  background-color: #ecede8;
+}
+
 .app {
   margin: 20px;
 }
@@ -17,11 +21,19 @@
   margin: 20px;
 }
 
-.country-button,
+.country-button {
+  border-radius: 4px;
+  background-color: #944338;
+  color: white;
+  height: 30px;
+  width: 110px;
+}
+
 .city-button {
   border-radius: 4px;
-  background-color: #bddfeb;
-  color: #242a2d;
-  height: 30px;
-  width: 130px;
+  background-color: #7e8e3e;
+  color: white;
+  font-size: calc(0.1vw + 1.5vh);
+  height: 50px;
+  width: 150px;
 }

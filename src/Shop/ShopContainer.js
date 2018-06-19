@@ -19,7 +19,7 @@ class ShopContainer extends React.Component {
   }
 
   render() {
-    let city = this.props.match.params.city;
+    const city = this.props.match.params.city;
     return (
       <div>
         <h4>Shops in {city}:</h4>
