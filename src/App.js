@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
 import ShopContainer from './Shop/ShopContainer';
-import Modal from './Modal/Modal';
+import ModalContainer from './Modal/ModalContainer';
 
 const App = () => (
   <div>
-    <Modal />
+    <ModalContainer />
     <Router>
       <div className="app">
         <div className="header">
