@@ -44,6 +44,13 @@ class App extends React.Component {
             />
             <Route
               path="/countries/:country"
+              exact
+              component={props => (
+                <CityContainer {...props} data={this.state.data} />
+              )}
+            />
+            <Route
+              path="/countries/:country/cities"
               component={props => (
                 <CityContainer {...props} data={this.state.data} />
               )}
