@@ -19,11 +19,13 @@ class ShopContainer extends React.Component {
   }
 
   render() {
-    const city = this.props.match.params.city;
+    // console.log(this.props);
+    // const city = this.props.match.params.city;
     return (
       <div>
-        <h4>Shops in {city}:</h4>
-        <ShopList data={this.state.data} city={city} />
+        {/* <h4>Shops in {city}:</h4> */}
+        <h4>Shops in... :</h4>
+        <ShopList data={this.state.data} /* city={city} */ />
       </div>
     );
   }

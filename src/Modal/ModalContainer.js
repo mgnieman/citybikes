@@ -21,6 +21,7 @@ class ModalContainer extends React.Component {
   }
 
   render() {
+    // const city = this.props.match.params.city;
     return (
       <div
         className="modal-container"
@@ -36,9 +37,8 @@ class ModalContainer extends React.Component {
           {this.props.label}
         </button>
         {this.state.isOpen && (
-          <Modal show={this.state.isOpen}>
-            Here's some content for the modal
-          </Modal>
+          <Modal show={this.state.isOpen} />
+          // <ShopContainer />
         )}
       </div>
     );
