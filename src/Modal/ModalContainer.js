@@ -28,7 +28,13 @@ class ModalContainer extends React.Component {
           this.node = node;
         }}
       >
-        <button onClick={this.handleClick}>Open the modal</button>
+        <button
+          value={this.props.label}
+          className="city-button"
+          onClick={this.handleClick}
+        >
+          {this.props.label}
+        </button>
         {this.state.isOpen && (
           <Modal show={this.state.isOpen}>
             Here's some content for the modal

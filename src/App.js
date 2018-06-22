@@ -8,7 +8,6 @@ import ModalContainer from './Modal/ModalContainer';
 
 const App = () => (
   <div>
-    <ModalContainer />
     <Router>
       <div className="app">
         <div className="header">

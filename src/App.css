@@ -33,7 +33,7 @@ body {
   border-radius: 4px;
   background-color: #7e8e3e;
   color: white;
-  font-size: calc(0.1vw + 1.5vh);
+  font-size: calc(0.2vw + 1vh);
   height: 50px;
   width: 150px;
 }
