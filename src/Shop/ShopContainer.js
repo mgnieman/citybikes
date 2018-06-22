@@ -1,34 +1,20 @@
 import React from 'react';
-import Util from '../Util';
 import ShopList from './ShopList';
 
-class ShopContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: []
-    };
-  }
+const ShopContainer = props => {
+  console.log('Container:', props);
 
-  componentDidMount() {
-    Util.fetchData().then(data => {
-      this.setState({
-        data: data.networks
-      });
-    });
-  }
-
-  render() {
-    // console.log(this.props);
-    // const city = this.props.match.params.city;
+  if (props.data) {
+    const city = props.match.params.city;
     return (
       <div>
-        {/* <h4>Shops in {city}:</h4> */}
-        <h4>Shops in... :</h4>
-        <ShopList data={this.state.data} /* city={city} */ />
+        <h4>Shops in {city}:</h4>
+        <ShopList data={props.data} city={city} />
       </div>
     );
+  } else {
+    return null;
   }
-}
+};
 
 export default ShopContainer;

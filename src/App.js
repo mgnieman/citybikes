@@ -50,7 +50,9 @@ class App extends React.Component {
             />
             <Route
               path="/countries/:country/cities/:city"
-              component={ShopContainer}
+              component={props => (
+                <ShopContainer {...props} data={this.state.data} />
+              )}
             />
           </div>
         </Router>
