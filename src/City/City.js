@@ -1,9 +1,8 @@
 import React from 'react';
 import CityButton from './CityButton';
-import ModalContainer from '../Modal/ModalContainer';
 
 const City = props => (
-  <ModalContainer
+  <CityButton
     label={props.data.location.city}
     city={props.data.location.city}
   />
