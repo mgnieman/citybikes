@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
-import ModalContainer from './Modal/ModalContainer';
 import ShopContainer from './Shop/ShopContainer';
 import Util from './Util';
 
