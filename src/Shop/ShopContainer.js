@@ -1,6 +1,7 @@
 import React from 'react';
 import ShopList from './ShopList';
 import BackButton from '../BackButton';
+import { MapContainer } from '../Map/MapContainer';
 
 class ShopContainer extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class ShopContainer extends React.Component {
               <ShopList data={this.props.data} city={city} />
               <div className="wrapper-div" ref={this.setWrapperRef}>
                 <BackButton back={this.props.history.goBack} />
+                <MapContainer />
               </div>
             </div>
           </div>
