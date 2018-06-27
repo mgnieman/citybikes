@@ -52,7 +52,7 @@ export const wrapper = options => WrappedComponent => {
       this.scriptCache = cache({
         google: GoogleApi({
           apiKey: apiKey,
-          libraries
+          libraries: libraries
         })
       });
     }

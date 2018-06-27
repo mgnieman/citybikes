@@ -38,7 +38,12 @@ class ShopContainer extends React.Component {
               <h4>Shops in {city}:</h4>
               <ShopList data={this.props.data} city={city} />
               <div className="wrapper-div" ref={this.setWrapperRef}>
+                <br />
+                <br />
                 <BackButton back={this.props.history.goBack} />
+                <br />
+                <br />
+                <br />
                 <MapContainer />
               </div>
             </div>
