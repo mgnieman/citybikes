@@ -44,7 +44,7 @@ class ShopContainer extends React.Component {
                 <br />
                 <br />
                 <br />
-                <MapContainer />
+                {/* <MapContainer /> */}
               </div>
             </div>
           </div>
