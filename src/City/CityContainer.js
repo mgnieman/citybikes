@@ -7,7 +7,9 @@ const CityContainer = props => {
     <div>
       <h4>Select a city in {country}</h4>
       <div className="city-container">
-        <CityList data={props.data} country={country} />
+        <ul>
+          <CityList data={props.data} country={country} />
+        </ul>
       </div>
     </div>
   );
