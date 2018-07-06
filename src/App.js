@@ -48,18 +48,20 @@ class App extends React.Component {
                 <CityContainer {...props} data={this.state.data} />
               )}
             />
-            <Route
-              path="/countries/:country/cities"
-              component={props => (
-                <CityContainer {...props} data={this.state.data} />
-              )}
-            />
-            <Route
-              path="/countries/:country/cities/:city"
-              component={props => (
-                <ShopContainer {...props} data={this.state.data} />
-              )}
-            />
+            <div className="city-and-shop-container">
+              <Route
+                path="/countries/:country/cities"
+                component={props => (
+                  <CityContainer {...props} data={this.state.data} />
+                )}
+              />
+              <Route
+                path="/countries/:country/cities/:city"
+                component={props => (
+                  <ShopContainer {...props} data={this.state.data} />
+                )}
+              />
+            </div>
           </div>
         </Router>
       </div>

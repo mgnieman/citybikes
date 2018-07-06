@@ -10,8 +10,7 @@ body {
   margin-bottom: 30px;
 }
 
-.country-container,
-.city-container {
+.country-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -21,6 +20,18 @@ body {
   margin: 20px;
 }
 
+.city-and-shop-container {
+  display: flex;
+}
+
+.city-container {
+  /* /// */
+}
+
+.shop-container {
+  width: 78%;
+}
+
 .country-button {
   border-radius: 4px;
   background-color: #944338;
@@ -28,37 +39,3 @@ body {
   height: 30px;
   width: 110px;
 }
-
-.city-button {
-  border-radius: 4px;
-  background-color: #7e8e3e;
-  color: white;
-  font-size: calc(0.2vw + 1vh);
-  height: 50px;
-  width: 150px;
-}
-
-/* MODAL */
-
-.backdrop {
-  position: fixed;
-  top: 10;
-  bottom: 10em;
-  left: 0;
-  right: 0;
-  /* background-color: #87909e; */
-  padding: 50px;
-}
-
-.modal {
-  background-color: #e5e5d8;
-  border: 5px solid #7e8e3e;
-  border-radius: 5px;
-  max-width: 500px;
-  max-height: 400px;
-  min-height: 300px;
-  margin: 0 auto;
-  padding: 30px;
-}
-
-/* END MODAL */
