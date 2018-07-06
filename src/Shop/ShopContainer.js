@@ -1,6 +1,7 @@
 import React from 'react';
 import ShopList from './ShopList';
-import Map from '../Map/SimpleMap';
+import SimpleMap from '../Map/SimpleMap';
+import SimpleMapPage from '../Map/SimpleMapPage';
 
 class ShopContainer extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class ShopContainer extends React.Component {
           <h4>Shops in {city}:</h4>
           <ShopList data={this.props.data} city={city} />
           <br />
-          <Map />
+          <SimpleMapPage />
         </div>
       );
     } else {

@@ -12,6 +12,11 @@ class SimpleMap extends Component {
     zoom: 11
   };
 
+  // renderChildren() {
+  //   const { children } = this.props;
+  //   if (!children) return;
+  // }
+
   render() {
     return (
       // Important! Always set the container height explicitly
@@ -23,6 +28,7 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
+          {/* {this.renderChildren()} */}
           {/* <AnyReactComponent
             lat={59.955413}
             lng={30.337844}

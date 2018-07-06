@@ -39,3 +39,22 @@ body {
   height: 30px;
   width: 110px;
 }
+
+/* MAP */
+
+.my-great-place {
+  position: 'absolute';
+  width: 100%;
+  height: 100%;
+  left: -20em;
+  top: -20em;
+
+  border: '5px solid #f44336';
+  border-radius: 40px;
+  background-color: 'white';
+  text-align: 'center';
+  color: '#3f51b5';
+  font-size: 16px;
+  font-weight: 'bold';
+  padding: 4em;
+}
