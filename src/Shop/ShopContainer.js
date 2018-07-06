@@ -1,7 +1,7 @@
 import React from 'react';
 import ShopList from './ShopList';
-import BackButton from '../BackButton';
-import { MapContainer } from '../Map/MapContainer';
+import CloseButton from '../CloseButton';
+// import { MapContainer } from '../Map/MapContainer';
 
 class ShopContainer extends React.Component {
   constructor(props) {
@@ -33,22 +33,22 @@ class ShopContainer extends React.Component {
       const city = this.props.match.params.city;
       return (
         <div className="modal-container" className="backdrop">
-          <div>
-            <div className="modal">
-              <h4>Shops in {city}:</h4>
-              <ShopList data={this.props.data} city={city} />
-              <div className="wrapper-div" ref={this.setWrapperRef}>
-                <br />
-                <br />
-                <BackButton back={this.props.history.goBack} />
-                <br />
-                <br />
-                <br />
-                {/* <MapContainer /> */}
-              </div>
+          {/* <div> */}
+          <div className="modal">
+            <h4>Shops in {city}:</h4>
+            <ShopList data={this.props.data} city={city} />
+            <div className="wrapper-div" ref={this.setWrapperRef}>
+              <br />
+              <br />
+              <CloseButton back={this.props.history.goBack} />
+              <br />
+              <br />
+              <br />
+              {/* <MapContainer /> */}
             </div>
           </div>
         </div>
+        // </div>
       );
     } else {
       return null;

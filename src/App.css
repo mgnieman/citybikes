@@ -42,16 +42,17 @@ body {
 
 .backdrop {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 10;
+  bottom: 10em;
   left: 0;
   right: 0;
-  background-color: #87909e;
+  /* background-color: #87909e; */
   padding: 50px;
 }
 
 .modal {
-  background-color: #ffffff;
+  background-color: #e5e5d8;
+  border: 5px solid #7e8e3e;
   border-radius: 5px;
   max-width: 500px;
   max-height: 400px;

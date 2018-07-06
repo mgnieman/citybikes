@@ -1,9 +1,9 @@
 import React from 'react';
 
-const BackButton = props => (
+const CloseButton = props => (
   <button className="back-button" onClick={props.back}>
-    Back
+    Close
   </button>
 );
 
-export default BackButton;
+export default CloseButton;
