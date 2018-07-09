@@ -2,6 +2,7 @@ import React from 'react';
 import ShopList from './ShopList';
 import SimpleMap from '../Map/SimpleMap';
 import SimpleMapPage from '../Map/SimpleMapPage';
+import MyMapComponent from '../MapGoogle/MyMapComponent';
 
 class ShopContainer extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class ShopContainer extends React.Component {
           <h4>Shops in {city}:</h4>
           <ShopList data={this.props.data} city={city} />
           <br />
-          <SimpleMapPage />
+          <MyMapComponent isMarkerShown />
         </div>
       );
     } else {
