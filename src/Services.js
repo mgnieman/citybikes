@@ -1,6 +1,6 @@
-function Util() {}
+function Services() {}
 
-Util.fetchData = function() {
+Services.fetchData = function() {
   return new Promise((resolve, reject) => {
     fetch('http://api.citybik.es/v2/networks/').then(response => {
       if (response.ok) {
@@ -12,4 +12,4 @@ Util.fetchData = function() {
   });
 };
 
-export default Util;
+export default Services;

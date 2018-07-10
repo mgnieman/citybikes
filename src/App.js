@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
 import ShopContainer from './Shop/ShopContainer';
-import Util from './Util';
+import Services from './Services';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    Util.fetchData().then(data => {
+    Services.fetchData().then(data => {
       this.setState({
         data: data.networks
       });
