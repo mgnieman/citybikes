@@ -16,6 +16,29 @@ const DataUtil = {
       }
     });
     return cities;
+  },
+
+  calculateCenter: (city, data) => {
+    const lats = [];
+    const lngs = [];
+    let mapInfo = {};
+    if (data) {
+      data.map(network => {
+        if (network.location.city === city) {
+          lats.push(parseFloat(network.location.latitude));
+          lngs.push(parseFloat(network.location.longitude));
+        }
+        return mapInfo;
+      });
+
+      mapInfo = {
+        center: {
+          lat: lats.reduce((a, b) => a + b, 0) / lats.length,
+          lng: lngs.reduce((a, b) => a + b, 0) / lngs.length
+        }
+      };
+    }
+    return mapInfo;
   }
 };
 export default DataUtil;

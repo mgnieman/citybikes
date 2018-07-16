@@ -19,8 +19,10 @@ const CityList = props => {
           if (nameA > nameB) {
             return 1;
           }
+          return sorted;
         });
       }
+      return sorted;
     });
     return sorted;
   };
