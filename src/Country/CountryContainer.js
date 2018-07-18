@@ -1,6 +1,5 @@
 import React from 'react';
 import CountryList from './CountryList';
-import DataUtil from '../DataUtil';
 
 const CountryContainer = props => {
   return (
