@@ -61,8 +61,9 @@ const DataUtil = {
     if (data) {
       data.map(network => {
         if (
-          network.location.city === city &&
-          network.location.country === country
+          (network.location.city === city &&
+            network.location.country === country) ||
+          (city === 'all' && network.location.country === country)
         ) {
           lats.push(parseFloat(network.location.latitude));
           lngs.push(parseFloat(network.location.longitude));

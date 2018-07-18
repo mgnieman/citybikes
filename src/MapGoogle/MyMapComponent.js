@@ -22,7 +22,8 @@ const MyMapComponent = compose(
   return (
     <GoogleMap
       defaultZoom={12}
-      defaultCenter={{ lat: 52.50812095, lng: 13.390718199999998 }}
+      // defaultCenter={{ lat: 52.50812095, lng: 13.390718199999998 }}
+      defaultCenter={center}
       center={center}
     >
       {props.isMarkerShown && (

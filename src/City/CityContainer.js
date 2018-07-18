@@ -5,8 +5,7 @@ import DataUtil from '../DataUtil';
 
 const CityContainer = props => {
   const country = props.match.params.country;
-  const mapInfo = DataUtil.calculateCenter(country, props.data);
-  console.log(mapInfo);
+  const mapInfo = DataUtil.calculateCenter(country, 'all', props.data);
   return (
     <div className="city-container">
       <div className="city-list">
@@ -16,7 +15,7 @@ const CityContainer = props => {
           <br />
         </ul>
       </div>
-      <div className="do-i-need-this?">
+      <div className="country-map">
         <MyMapComponent isMarkerShown mapInfo={mapInfo} />
       </div>
     </div>
