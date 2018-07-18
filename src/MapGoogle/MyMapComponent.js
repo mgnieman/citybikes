@@ -21,7 +21,7 @@ const MyMapComponent = compose(
   const { center } = props.mapInfo;
   return (
     <GoogleMap
-      defaultZoom={8}
+      defaultZoom={12}
       defaultCenter={{ lat: 52.50812095, lng: 13.390718199999998 }}
       center={center}
     >
