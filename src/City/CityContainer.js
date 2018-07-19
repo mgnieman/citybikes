@@ -5,7 +5,10 @@ import DataUtil from '../DataUtil';
 
 const CityContainer = props => {
   const country = props.match.params.country;
-  const mapInfo = DataUtil.calculateCenter(country, 'all', props.data);
+  const mapInfo = {
+    center: DataUtil.calculateCenter(country, 'all', props.data),
+    zoom: 6
+  };
   return (
     <div className="city-container">
       <div className="city-list">

@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="body">
         <Router>
           <div className="app">
             <div className="header">

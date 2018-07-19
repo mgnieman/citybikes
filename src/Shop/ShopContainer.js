@@ -7,11 +7,14 @@ class ShopContainer extends React.Component {
   render() {
     this.city = this.props.match.params.city;
     this.country = this.props.match.params.country;
-    this.mapInfo = DataUtil.calculateCenter(
-      this.country,
-      this.city,
-      this.props.data
-    );
+    this.mapInfo = {
+      center: DataUtil.calculateCenter(
+        this.country,
+        this.city,
+        this.props.data
+      ),
+      zoom: 12
+    };
 
     return (
       <div className="shop-container">

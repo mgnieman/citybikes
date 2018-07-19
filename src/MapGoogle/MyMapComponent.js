@@ -18,12 +18,13 @@ const MyMapComponent = compose(
   withScriptjs,
   withGoogleMap
 )(props => {
-  const { center } = props.mapInfo;
+  const { center } = props.mapInfo.center;
+  const zoomLevel = props.mapInfo.zoom;
   return (
     <GoogleMap
-      defaultZoom={12}
+      // defaultZoom={12}
       // defaultCenter={{ lat: 52.50812095, lng: 13.390718199999998 }}
-      defaultCenter={center}
+      zoom={zoomLevel}
       center={center}
     >
       {props.isMarkerShown && (

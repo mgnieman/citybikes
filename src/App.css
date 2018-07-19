@@ -2,7 +2,12 @@ body {
   background-color: #ecede8;
 }
 
-.app {
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.body {
   margin: 20px;
 }
 
@@ -17,7 +22,8 @@ body {
 
 .country-link,
 .city-link {
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .city-and-shop-container {
@@ -26,6 +32,10 @@ body {
 
 .city-container {
   display: flex;
+}
+
+.city-list {
+  width: 15em;
 }
 
 .shop-container {
