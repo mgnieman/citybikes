@@ -20,6 +20,7 @@ const MyMapComponent = compose(
 )(props => {
   const { center } = props.mapInfo.center;
   const zoomLevel = props.mapInfo.zoom;
+  // const citySelected = props.citySelected;
   return (
     <GoogleMap
       // defaultZoom={12}

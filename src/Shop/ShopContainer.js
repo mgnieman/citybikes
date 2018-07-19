@@ -5,8 +5,8 @@ import MyMapComponent from '../MapGoogle/MyMapComponent';
 
 class ShopContainer extends React.Component {
   render() {
-    this.city = this.props.match.params.city;
     this.country = this.props.match.params.country;
+    this.city = this.props.match.params.city;
     this.mapInfo = {
       center: DataUtil.calculateCenter(
         this.country,
@@ -21,11 +21,9 @@ class ShopContainer extends React.Component {
         <h4>Shops in {this.city}:</h4>
         <ShopList
           data={this.props.data}
-          city={this.city}
           country={this.country}
+          city={this.city}
         />
-        <br />
-        <MyMapComponent isMarkerShown mapInfo={this.mapInfo} />
       </div>
     );
   }
