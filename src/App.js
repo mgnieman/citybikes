@@ -1,14 +1,8 @@
 import React from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
-import ShopContainer from './Shop/ShopContainer';
 import Services from './Services';
 
 class App extends React.Component {

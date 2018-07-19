@@ -1,7 +1,6 @@
 import React from 'react';
 import ShopList from './ShopList';
 import DataUtil from '../DataUtil';
-import MyMapComponent from '../MapGoogle/MyMapComponent';
 
 class ShopContainer extends React.Component {
   render() {
