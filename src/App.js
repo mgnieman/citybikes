@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect
+} from 'react-router-dom';
 import CountryContainer from './Country/CountryContainer';
 import CityContainer from './City/CityContainer';
 import ShopContainer from './Shop/ShopContainer';
@@ -42,8 +47,8 @@ class App extends React.Component {
               render={() => <CountryContainer data={this.state.data} />}
             />
             <Route
-              path="/countries/:country"
               exact
+              path="/countries/:country"
               component={props => (
                 <CityContainer
                   {...props}
@@ -52,11 +57,17 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* <Route
+            <Route
+              exact
               path="/countries/:country/cities"
-              // match path="/countries/:country"
-
-            /> */}
+              component={props => (
+                <CityContainer
+                  {...props}
+                  data={this.state.data}
+                  citySelected={false}
+                />
+              )}
+            />
             <Route
               path="/countries/:country/cities/:city"
               component={props => (
@@ -65,7 +76,6 @@ class App extends React.Component {
                   data={this.state.data}
                   citySelected={true}
                 />
-                // <ShopContainer {...props} data={this.state.data} />
               )}
             />
           </div>
