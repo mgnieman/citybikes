@@ -58,6 +58,7 @@ const DataUtil = {
     const lats = [];
     const lngs = [];
     let mapInfo = {};
+
     if (data) {
       data.map(network => {
         if (

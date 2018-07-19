@@ -11,7 +11,8 @@ function DisplayMapComponent(props) {
   if (citySelected) {
     mapInfo = {
       center: DataUtil.calculateCenter(country, city, props.data),
-      zoom: 12
+      zoom: 12,
+      markerPosition: { lat: 43.25643601915583, lng: -79.86929655075073 }
     };
   } else {
     mapInfo = {
