@@ -1,29 +1,24 @@
 import React from 'react';
 import CityList from './CityList';
-import MyMapComponent from '../MapGoogle/MyMapComponent';
-import DataUtil from '../DataUtil';
 import DisplayShopContainer from '../Shop/DisplayShopContainer';
+import DisplayMapComponent from '../MapGoogle/DisplayMapComponent';
 
 class CityContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      country: this.props.match.params.country,
       citySelected: this.props.citySelected
     };
   }
 
   render() {
-    const country = this.props.match.params.country;
-    const mapInfo = {
-      center: DataUtil.calculateCenter(country, 'all', this.props.data),
-      zoom: 6
-    };
     return (
       <div className="city-container">
         <div className="city-list">
-          <h4>Select a city in {country}</h4>
+          <h4>Select a city in {this.state.country}</h4>
           <ul>
-            <CityList data={this.props.data} country={country} />
+            <CityList data={this.props.data} country={this.state.country} />
             <br />
           </ul>
         </div>
@@ -33,10 +28,13 @@ class CityContainer extends React.Component {
             data={this.props.data}
             citySelected={this.state.citySelected}
           />
-          <MyMapComponent
-            isMarkerShown
-            mapInfo={mapInfo}
-            // citySelected={this.state.citySelected}
+          <DisplayMapComponent
+            citySelected={this.state.citySelected}
+            country={this.props.match.params.country}
+            data={this.props.data}
+            city={
+              this.props.match.params.city ? this.props.match.params.city : null
+            }
           />
         </div>
       </div>
